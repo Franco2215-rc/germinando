@@ -38,19 +38,31 @@
 # for i in range (12):
 #     numero_aleatorio = random.randint(1,750)
 #     numeros.append(numero_aleatorio)
-# print(f"lista generada:{numeros}")
+# print(f"lista generada:{numeros}")  
 # print(f"El numero mas grande de la lista es: {max(numeros)}")
 
-usuarios = [
-    {"nombre": "Castro" ,"email": "castro@gmail.com"},
-    {"nombre": "Javier" ,"email": "javier@gmail.com"},
-    {"nombre": "Elias" , "email": "elias@gmail.com"}
-]
-print("Nombres de los usuarios: ")
-for usuario in usuarios:
-    print(f"-{usuario['nombre']}")
+# usuarios = [
+#      {"nombre": "Castro" ,"email": "castro@gmail.com"},
+#      {"nombre": "Javier" ,"email": "javier@gmail.com"},
+#      {"nombre": "Elias" , "email": "elias@gmail.com"}
+#  ]
+# print("Nombres de los usuarios: ")
+# for usuario in usuarios:
+#      print(f"-{usuario['nombre']}")
 
-    
+usuarios = {
+    "ana": "Corrientes 800",
+    "pedro": "Cerrito 2000",
+    "lucia": "Teniente agneta 1000"
+}
+
+nombre = input("Nombre: ").lower()
+
+resultados = usuarios.get(nombre)
+if resultados:
+    print(f"Usuario encontrado, la direccion es {resultados}")
+else:
+    print(f"Usuario no encontrado, intente devuelta :o")
     
 
 
