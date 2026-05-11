@@ -24,16 +24,18 @@
 
 
 # with open("notas.txt", "w", encoding="utf-8") as archivo:
-#          archivo.write(nota1 + "genio")
-#          archivo.write(nota2+  "pedilo")
-#          archivo.write(nota3+  "retirate")
-#          print ("Archivo creado")
+#            archivo.write(nota1  + "genio")
+#            archivo.write(nota2  + "pedilo")
+#            archivo.write(nota3  + "retirate")
+#            print ("Archivo creado")
 try:
-         with open("notas.txt", "r", encoding="utf-8") as archivo:
-              for linea in archivo:
-                   print(linea.strip())
+       with open("notas.txt", "r", encoding="utf-8") as archivo:
+            lineas = archivo.readlines()
+       lineas.sort()
+       for linea in lineas:
+             print(linea.strip())
 except FileNotFoundError:
-         print("El archivo solicitado no existe")
+       print("El archivo solicitado no existe")
 
 
 
