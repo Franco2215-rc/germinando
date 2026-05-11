@@ -17,17 +17,23 @@
 #     print("No se puede dividir por 0")
 # except ValueError:
 #     print("Ingrese valores validos")
+# nota1 = (input("ingrese la primera nota: "))
+# nota2 = (input("ingrese la segunda nota: "))
+# nota3 = (input("ingrese la tercera nota: "))
+
+
+
 # with open("notas.txt", "w", encoding="utf-8") as archivo:
-#       archivo.write("HOLAAAAA")
-#       archivo.write("ROJO AMARGO")
-#       archivo.write("UWO")
-#       print ("Archivo creado")
+#          archivo.write(nota1 + "genio")
+#          archivo.write(nota2+  "pedilo")
+#          archivo.write(nota3+  "retirate")
+#          print ("Archivo creado")
 try:
-      with open("notas.txt", "r", encoding="utf-8") as archivo:
-           for linea in archivo:
-                print(linea.strip())
+         with open("notas.txt", "r", encoding="utf-8") as archivo:
+              for linea in archivo:
+                   print(linea.strip())
 except FileNotFoundError:
-      print("El archivo solicitado no existe")
+         print("El archivo solicitado no existe")
 
 
 
